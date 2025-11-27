@@ -41,7 +41,7 @@ describe("BookList click functionality", () => {
     const cards = screen.getAllByTestId("test-border-card")
 
     // inizialmente nessun bordo rosso
-    expect(cards[0]).not.toHaveStyle("border: 3px solid red")
+    expect(cards[0]).toHaveStyle("border: none")
 
     // clicco la prima card
     fireEvent.click(cards[0])
