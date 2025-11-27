@@ -24,7 +24,7 @@ const SingleComment = ({ comment }) => {
   }
 
   return (
-    <ListGroup.Item>
+    <ListGroup.Item role="listitem">
       {comment.comment}
       <Button
         variant="danger"

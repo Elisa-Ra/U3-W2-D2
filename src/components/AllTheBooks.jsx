@@ -1,5 +1,5 @@
-import { Card, Col, Row } from 'react-bootstrap'
-import fantasy from '../data/fantasy.json'
+import { Card, Col, Row } from "react-bootstrap"
+import fantasy from "../data/fantasy.json"
 
 const AllTheBooks = () => {
   return (
@@ -7,7 +7,10 @@ const AllTheBooks = () => {
       {fantasy.map((book) => {
         return (
           <Col xs={12} md={4} key={book.asin}>
-            <Card className="book-cover d-flex flex-column">
+            <Card
+              className="book-cover d-flex flex-column"
+              data-testid="test-card"
+            >
               <Card.Img variant="top" src={book.img} />
               <Card.Body>
                 <Card.Title>{book.title}</Card.Title>

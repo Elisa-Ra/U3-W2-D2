@@ -9,6 +9,7 @@ const SingleBook = ({ book, selectedBook, changeSelectedBook }) => {
   return (
     <>
       <Card
+        data-testid="test-border-card"
         // onClick={() => this.setState({ selected: !this.state.selected })}
         onClick={() => changeSelectedBook(book.asin)}
         style={{
