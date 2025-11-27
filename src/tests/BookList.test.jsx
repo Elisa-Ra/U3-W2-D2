@@ -31,3 +31,23 @@ describe("testing post list", () => {
     expect(elementi).toHaveLength(8)
   })
 })
+
+//Verifica che, cliccando su un libro, il suo bordo cambi colore
+describe("BookList click functionality", () => {
+  it("should change border color after clicking on a book", () => {
+    render(<BookList books={fantasy} />)
+
+    // prendo tutte le card
+    const cards = screen.getAllByTestId("test-border-card")
+
+    // inizialmente nessun bordo rosso
+    expect(cards[0]).not.toHaveStyle("border: 3px solid red")
+
+    // clicco la prima card
+    fireEvent.click(cards[0])
+
+    // ora la prima card deve avere bordo rosso
+    expect(cards[0]).toHaveStyle("border: 3px solid red")
+    // la seconda resta senza bordo
+  })
+})
